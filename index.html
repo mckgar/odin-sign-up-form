@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="image-side">
+    <h1>ODIN</h1>
+    <p>Photo Credit</p>
+  </div>
+  <div class="form-side">
+    <p>This is not a real service! But is anything <em>real</em>? What if this 
+      form is the realest thing there is? Does it not leading anywhere make it 
+      any less real than any other form? You should sign up now to find out.
+    </p>
+    <p>You know you want to.</p>
+    <form>
+      <fieldset>
+        <legend>Become real</legend>
+        <div class="name">
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name">
+        </div>
+        <div class="contact">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone">
+        </div>
+        <div class="password">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" name="confirm-password" id="confirm-password">
+        </div>
+      </fieldset>
+      <button type="submit">Create Account</button>
+    </form>
+    <p>Already have an account? <a href="#">Log in</a></p>
+  </div>
+</body>
+</html>
