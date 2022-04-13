@@ -10,7 +10,7 @@
 
 body {
   font-family: "GothicaBookOblique", serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 }
 
@@ -64,7 +64,7 @@ body {
 
 .form-side p {
   padding-left: 30px;
-  width: 50rem;
+  max-width: 50rem;
 }
 
 .pitch {
@@ -85,11 +85,13 @@ legend {
 }
 
 .row {
-  width: 700px;
+  max-width: 700px;
   padding-left: 30px;
   padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .item {
@@ -104,14 +106,15 @@ legend {
 }
 
 input {
-  width: 300px;
+  width: calc(min(300px, 100%) - 1.5rem);
   font-size: 1.3rem;
+  margin-right: 1.5rem;
 }
 
 .valid {
   font-size: 1.3rem;
   position: absolute;
-  left: 305px;
+  left: calc(min(300px, 100%) + 5px - 1.5rem);
   top: 1.5rem;
 }
 
