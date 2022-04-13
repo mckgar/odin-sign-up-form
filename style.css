@@ -71,15 +71,22 @@ legend {
 }
 
 .row {
+  width: 700px;
   padding-left: 30px;
   padding-bottom: 15px;
   display: flex;
-  gap: 30px
+  justify-content: space-between;
 }
 
 .item {
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.requirement {
+  max-width: 300px;
+  color: red;
 }
 
 input {
@@ -87,9 +94,60 @@ input {
   font-size: 1.3rem;
 }
 
+.valid {
+  font-size: 1.3rem;
+  position: absolute;
+  left: 305px;
+  top: 1.5rem;
+}
+
+input:placeholder-shown {
+  border: 2px solid black;
+}
+
+input:not(:placeholder-shown):valid {
+  border: 2px solid green;
+}
+
+input:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+
+input:not(:placeholder-shown):valid+span::after {
+  content: "✅";
+  color: green;
+}
+
+input:not(:placeholder-shown):invalid+span::after {
+  content: "⚠";
+  color: red;
+}
+
+input:not(:placeholder-shown):invalid~.mail:after {
+  content: "Please enter a valid email address";
+}
+
+input:not(:placeholder-shown):invalid~.phone:after {
+  content: "Please enter a valid US phone number";
+}
+
+input:not(:placeholder-shown):invalid~.password:after {
+  content: "Must be at least 8 characters long and contain a number.";
+}
+
+input:not(:placeholder-shown):invalid~.confirm:after {
+  content: "Passwords do not match";
+}
+
 button {
   margin: 15px 30px;
-  padding: 5px 30px;
+  padding: 7px 35px;
+  color: aliceblue;
+  background-color: midnightblue;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
 
-  
+.form-side a {
+  color: midnightblue;
 }

@@ -25,31 +25,54 @@
         <div class="row">
           <div class="item">
             <label for="first-name">First Name</label>
-            <input type="text" name="first-name" id="first-name">
+            <input type="text" name="first-name" id="first-name"
+                placeholder="John">
+            <span class="valid"></span>
           </div>
+          
           <div class="item">
             <label for="last-name">Last Name</label>
-            <input type="text" name="last-name" id="last-name">
+            <input type="text" name="last-name" id="last-name"
+                placeholder="Doe">
+            <span class="valid"></span>
           </div>
         </div>
+
         <div class="row">
           <div class="item">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" required
+                placeholder="sample@example.com">
+            <span class="valid"></span>
+            <div class="requirement mail"></div>
           </div>
+
           <div class="item">
             <label for="phone">Phone Number</label>
-            <input type="tel" name="phone" id="phone">
+            <input type="tel" name="phone" id="phone"
+                placeholder="123-456-7890"
+                pattern="\d{3}[\-| ]\d{3}[\-| ]\d{4}">
+            <span class="valid"></span>
+            <div class="requirement phone"></div>
           </div>
         </div>
+
         <div class="row">
           <div class="item">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
+            <label for="pwd">Password *</label>
+            <input type="password" name="pwd" id="pwd" required
+                placeholder=" " minlength="8" pattern="(?=.*\d).{8,}">
+            <span class="valid"></span>
+            <div class="requirement password"></div>
           </div>
+
           <div class="item">
-            <label for="confirm">Confirm Password</label>
-            <input type="password" name="confirm" id="confirm" required>
+            <label for="confirm">Confirm Password *</label>
+            <input type="password" name="confirm" id="confirm" required
+                placeholder=" " minlength="8">
+            <span class="valid"></span>
+            <div class="requirement confirm"></div>
+            <script src="pwdValidation.js"></script>
           </div>
         </div>
       </div>
